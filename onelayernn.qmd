@@ -1,7 +1,5 @@
 ---
 title: ""
-format: html
-editor: visual
 ---
 
 ### 有监督学习相关概念
