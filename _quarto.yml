@@ -1,0 +1,24 @@
+project:
+  type: website
+  output-dir: docs
+  
+website: 
+  title: "Survival Analysis SURF 2024"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: projects.qmd
+        text: SURF
+    tools:
+      - icon: github
+        href: https://github.com/hemu0626
+  page-footer:
+    right: "&copy, Copyright 2024, Mu He"
+    
+format: 
+  html: 
+    theme: cerulean
+    toc: true
+
+editor: source

@@ -1,0 +1,19 @@
+```{r}
+library(reticulate)
+py_install('pandas')
+py_install('matplotlib')
+py_install('numpy')
+reticulate::repl_python()
+virtualenv_install('matplotlib')
+os <- import("os")
+os$listdir(".")
+use_python("/xue/local/bin/python")
+```
+
+---
+title: installpypc.R
+author: yuexuezhang
+date: '2024-05-10'
+
+---
+
