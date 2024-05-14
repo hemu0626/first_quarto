@@ -14,5 +14,5 @@ website:
         text: try
 format: 
   html: 
-    theme: cerulean
+    theme: bootstrap
     toc: true
