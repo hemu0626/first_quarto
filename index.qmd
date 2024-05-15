@@ -9,7 +9,7 @@ I know nothing about the dynamic behind, but I successfully set it up. I will in
 
 > I never really found an IDE that I liked. I tried a few different ones including Spyder and Jupyter Notebook (not technically an IDE) and compared to RStudio and R Markdown they felt rather limited. Most Python users I met seem to think IDEs are not really important, which confuses me even further. That’s what you look at the entire time while programming!
 
-Once you got familiar with Rstudio, or anyway Posit IDE, you are spoiled, that is how I felt. Therefore, I decide to continue to teach and code in Rstudio, even with python or jupyter-note. I also use Zotero for reference and Typora for slides writing.
+Once you got familiar with Rstudio, or anyway Posit IDE, you are spoiled, that is how I felt. Therefore, I decide to continue to teach and code in Rstudio, even with python or jupyter-note. Here, I use Zotero for reference and Typora for slides writing. I followed the post above to set the enviroment, the code is below, simple but works.
 
 ```{r, eval=FALSE}
 library(reticulate)
@@ -25,5 +25,7 @@ reticulate::repl_python()
 #use_python("/opt/homebrew/bin/python3")
 py_install('scikit-survival')
 ```
+
+more on quarto, I learnt how to set this from youtuber [@robbins2023] and her github.
 
 ## Reference

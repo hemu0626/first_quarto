@@ -9,11 +9,6 @@ The more detail introduction part can be found at [@scikit-s] and [@polsterl2020
 
 The survival analysis is also known as time to event analysis, one of the key characteristics is that it involves censoring.
 
-```{=tex}
-\begin{split}y = \min(t, c) =
-\begin{cases}
-t & \text{if } \delta = 1 , \\
-c & \text{if } \delta = 0 .
-\end{cases}\end{split}
-```
+We will go through basic statistics and try these packages in R and Python
+
 ## Reference
