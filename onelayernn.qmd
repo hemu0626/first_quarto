@@ -4,7 +4,7 @@ title: "One Layer Neural Network"
 
 ### Build Neural Network to predict
 
-#### Demo 
+#### Demo
 
 ```{python}
 from sklearn.neural_network import MLPClassifier

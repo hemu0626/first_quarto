@@ -32,14 +32,14 @@
     "href": "onelayernn.html",
     "title": "One Layer Neural Network",
     "section": "",
-    "text": "Build Neural Network to predict\n\nOLS\n\nfrom sklearn.neural_network import MLPClassifier\nX = [[0., 0.], [1., 1.]]\ny = [0, 1]\nclf = MLPClassifier(solver='lbfgs', alpha=1e-5,\n                    hidden_layer_sizes=(5, 2), random_state=1)\nclf.fit(X, y)\n\nMLPClassifier(alpha=1e-05, hidden_layer_sizes=(5, 2), random_state=1,\n              solver='lbfgs')In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.MLPClassifierMLPClassifier(alpha=1e-05, hidden_layer_sizes=(5, 2), random_state=1,\n              solver='lbfgs')\n\n\n\nclf.predict([[2., 2.], [-1., -2.]])\n[coef.shape for coef in clf.coefs_]\n\nclf.predict_proba([[2., 2.], [1., 2.]])\n\narray([[1.96718015e-04, 9.99803282e-01],\n       [1.96718015e-04, 9.99803282e-01]])\n\n\n\nX = [[0., 0.], [1., 1.]]\ny = [[0, 1], [1, 1]]\nclf = MLPClassifier(solver='lbfgs', alpha=1e-5,\n                    hidden_layer_sizes=(15,), random_state=1)\nclf.fit(X, y)\nclf.predict([[1., 2.]])\nclf.predict([[0., 0.]])\n\narray([[0, 1]])"
+    "text": "Build Neural Network to predict\n\nDemo\n\nfrom sklearn.neural_network import MLPClassifier\nX = [[0., 0.], [1., 1.]]\ny = [0, 1]\nclf = MLPClassifier(solver='lbfgs', alpha=1e-5,\n                    hidden_layer_sizes=(5, 2), random_state=1)\nclf.fit(X, y)\n\nMLPClassifier(alpha=1e-05, hidden_layer_sizes=(5, 2), random_state=1,\n              solver='lbfgs')\n\n\n\nclf.predict([[2., 2.], [-1., -2.]])\n[coef.shape for coef in clf.coefs_]\n\nclf.predict_proba([[2., 2.], [1., 2.]])\n\narray([[1.96718015e-04, 9.99803282e-01],\n       [1.96718015e-04, 9.99803282e-01]])\n\n\n\nX = [[0., 0.], [1., 1.]]\ny = [[0, 1], [1, 1]]\nclf = MLPClassifier(solver='lbfgs', alpha=1e-5,\n                    hidden_layer_sizes=(15,), random_state=1)\nclf.fit(X, y)\nclf.predict([[1., 2.]])\nclf.predict([[0., 0.]])\n\narray([[0, 1]])\n\n\n\n\nVisualization of MLP weights on MNIST"
   },
   {
     "objectID": "basics.html",
     "href": "basics.html",
     "title": "Basics",
     "section": "",
-    "text": "The more detail introduction part can be found at (“Scikit-Survival” 2020) and (Polsterl 2020). The data set is from (Kalbfleisch and Prentice 1980), which is also available in R in package ‘survival’.\nThe survival analysis is also known as time to event analysis, one of the key characteristics is that it involves censoring.\n\\[\\begin{split}y = \\min(t, c) =\n\\begin{cases}\nt & \\text{if } \\delta = 1 , \\\\\nc & \\text{if } \\delta = 0 .\n\\end{cases}\\end{split}\\]"
+    "text": "The more detail introduction part can be found at (“Scikit-Survival” 2020) and (Polsterl 2020). The data set is from (Kalbfleisch and Prentice 1980), which is also available in R in package ‘survival’.\nThe survival analysis is also known as time to event analysis, one of the key characteristics is that it involves censoring.\nWe will go through basic statistics and try these packages in R and Python"
   },
   {
     "objectID": "basics.html#survival-analysis",
@@ -67,7 +67,7 @@
     "href": "basics.html#survival-analysis-in-scikit-survival",
     "title": "Basics",
     "section": "",
-    "text": "The more detail introduction part can be found at (“Scikit-Survival” 2020) and (Polsterl 2020). The data set is from (Kalbfleisch and Prentice 1980), which is also available in R in package ‘survival’.\nThe survival analysis is also known as time to event analysis, one of the key characteristics is that it involves censoring.\n\\[\\begin{split}y = \\min(t, c) =\n\\begin{cases}\nt & \\text{if } \\delta = 1 , \\\\\nc & \\text{if } \\delta = 0 .\n\\end{cases}\\end{split}\\]"
+    "text": "The more detail introduction part can be found at (“Scikit-Survival” 2020) and (Polsterl 2020). The data set is from (Kalbfleisch and Prentice 1980), which is also available in R in package ‘survival’.\nThe survival analysis is also known as time to event analysis, one of the key characteristics is that it involves censoring.\nWe will go through basic statistics and try these packages in R and Python"
   },
   {
     "objectID": "index.html#reference",
