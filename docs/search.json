@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "index",
+    "title": "SURF 2024",
     "section": "",
-    "text": "123"
+    "text": "I know nothing about the dynamic behind, but I successfully set it up. I will introduce the procedure. I completely agree with Dr. Gruber at his post (Gruber 2022) :\n\nI never really found an IDE that I liked. I tried a few different ones including Spyder and Jupyter Notebook (not technically an IDE) and compared to RStudio and R Markdown they felt rather limited. Most Python users I met seem to think IDEs are not really important, which confuses me even further. That’s what you look at the entire time while programming!\n\nOnce you got familiar with Rstudio, or anyway Posit IDE, you are spoiled, that is how I felt. Therefore, I decide to continue to teach and code in Rstudio, even with python or jupyter-note. I also use Zotero for reference and Typora for slides writing.\n\nlibrary(reticulate)\npy_install('pandas')\npy_install('matplotlib')\npy_install('numpy')\npy_install('jupyter')\npy_install('scikit-learn')\nreticulate::repl_python()\n#virtualenv_install('matplotlib')\n#os &lt;- import(\"os\")\n#os$listdir(\".\")\n#use_python(\"/opt/homebrew/bin/python3\")\npy_install('scikit-survival')"
   },
   {
     "objectID": "index.html#quarto",
@@ -16,9 +16,9 @@
   {
     "objectID": "projects.html",
     "href": "projects.html",
-    "title": "projects",
+    "title": "SURF Introduction",
     "section": "",
-    "text": "456"
+    "text": "SURF, short for Summer Undergraduate Research Fellowship, is the summer research program funded by Xi’an Jiaotong-Liverpool University for undergraduate students. It provides opportunities for undergraduate to know more about ‘research’. My surf projects mainly work on encourage students in self-learning and applications. Some of my past SURF can be found here.\n\nSurvival Analysis in Poisoning\nSurvival Analysis is an important branch in statistics, it analyze the expected duration of time until one event occurs. Survival analysis has widely been used in biostatistics, reliability and modeling, for various subjects and different types of data, especially in cancer-related study. The aim of this study was to investigate the clinical value of initial plasma diquat concentration in guiding the selection of extracorporeal blood purification regimens and gastric lavage.\n\n\nECTR\nExtracorporeal treatment (ECTR): A therapeutic intervention performed externally to the body, which promotes poison removal by mechanisms different from endogenous pathways. ECTR includes hemodialysis (HD), continuous renal replacement therapy (CRRT), extended dialysis, peritoneal dialysis (although technically occurring in the body), hemofiltration (HF), hemodiafiltration (HDF), hemoperfusion (HP), therapeutic plasma exchange (PE) and albumin/ “liver” dialysis. Clinically, the doctors will treat the patients based on the experience. In this project, we will analyze this question statistically, for checking the efficiency and significance for the treatments in subgroups.\n\n\nMethodology\nThe survival analysis of poisoning cases involving specific toxins requires the application of appropriate statistical models to capture the complexity and heterogeneity of the data. The Cox Proportional Hazards Model is a widely used approach in survival analysis, and in this study, we will employ it as the primary tool for investigating the factors that influence survival outcomes. The Cox model assumes that the hazard function, which represents the instantaneous risk of an event (in this case, death or recovery), is proportional across individuals over time. This assumption allows us to estimate the effect of predictors on the hazard function without assuming a specific distribution for survival times. To account for potential heterogeneity in the data, we will consider several extensions of the Cox model. One such extension is the Cure Model, which accounts for the possibility of long-term survivors who are effectively cured of the toxicity effects. This model separates the population into two groups: those who are cured and those who are not, and models the survival distribution for each group separately. Another extension is the Frailty Model, which incorporates individual-level frailty factors to capture heterogeneity in survival outcomes. Frailty factors represent latent characteristics that affect the hazard function of each individual, and their inclusion in the model allows for more accurate estimation of survival probabilities. Additionally, we will consider the Accelerated Failure Time (AFT) model, which assumes that the survival time of an individual is multiplied by an exponential function of the predictors. This model provides a direct interpretation of the predictors in terms of their effect on survival time."
   },
   {
     "objectID": "projects.html#quarto",
@@ -30,8 +30,57 @@
   {
     "objectID": "onelayernn.html",
     "href": "onelayernn.html",
-    "title": "try",
+    "title": "One Layer Neural Network",
     "section": "",
-    "text": "有监督学习相关概念\n\n输入(input)：输入给计算机的信息，通常我们用X表示，上例的输入就是一张图片\n目标(target)：人工专家定义的标注，通常用Y表示，上例中每张图片都会有一个标注，注明是猫或是狗，这种标注通常会转换成0-1表示。\n预测(predict)：计算机需要判断预测的结果，上例的预测输出就是预测图片的类别或是预测的概率值。\n模型(model)：计算机从输入到预测的判断逻辑，模型也可以认为是一种函数，函数输入，输出预测。最简单的函数就是一条直线，函数是有参数的，例如直线的斜率。\n损失(loss)：如果人类专家的标注和模型的预测不一致，就认为模型还不够好，需要一种量化方法来计算这种不够好的程度，这种量化计算的结果称为损失，例如直接将标注值减去预测值。\n优化(optimize)：一个良好的模型需要有较小的损失，所以机器学习问题也可以看成是一个最优化的问题，优化的目标是损失，可以调整的是模型的参数。\n\n\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nX = np.array([0.1, 0.2, 0.3, \n              0.4, 0.5, 0.6, \n              0.7, 0.8, 0.9, 1]).reshape(-1,1)\n\ny = np.array([0.05,0.08,0.1,\n             0.09,0.13,0.14,\n             0.17,0.21,0.28,0.27]).reshape(-1,1)\nplt.scatter(X,y)\n\n&lt;matplotlib.collections.PathCollection at 0x7fe7e2b634c0&gt;"
+    "text": "有监督学习相关概念\n\n输入(input)：输入给计算机的信息，通常我们用X表示，上例的输入就是一张图片\n目标(target)：人工专家定义的标注，通常用Y表示，上例中每张图片都会有一个标注，注明是猫或是狗，这种标注通常会转换成0-1表示。\n预测(predict)：计算机需要判断预测的结果，上例的预测输出就是预测图片的类别或是预测的概率值。\n模型(model)：计算机从输入到预测的判断逻辑，模型也可以认为是一种函数，函数输入，输出预测。最简单的函数就是一条直线，函数是有参数的，例如直线的斜率。\n损失(loss)：如果人类专家的标注和模型的预测不一致，就认为模型还不够好，需要一种量化方法来计算这种不够好的程度，这种量化计算的结果称为损失，例如直接将标注值减去预测值。\n优化(optimize)：一个良好的模型需要有较小的损失，所以机器学习问题也可以看成是一个最优化的问题，优化的目标是损失，可以调整的是模型的参数。\n\n\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nX = np.array([0.1, 0.2, 0.3, \n              0.4, 0.5, 0.6, \n              0.7, 0.8, 0.9, 1]).reshape(-1,1)\n\ny = np.array([0.05,0.08,0.1,\n             0.09,0.13,0.14,\n             0.17,0.21,0.28,0.27]).reshape(-1,1)\nplt.scatter(X,y)\n\n&lt;matplotlib.collections.PathCollection at 0x24f318f05e0&gt;"
+  },
+  {
+    "objectID": "basics.html",
+    "href": "basics.html",
+    "title": "Basics",
+    "section": "",
+    "text": "The more detail introduction part can be found at (“Scikit-Survival” 2020) and (Polsterl 2020). The data set is from (Kalbfleisch and Prentice 1980), which is also available in R in package ‘survival’.\nThe survival analysis is also known as time to event analysis, one of the key characteristics is that it involves censoring.\n\\[\\begin{split}y = \\min(t, c) =\n\\begin{cases}\nt & \\text{if } \\delta = 1 , \\\\\nc & \\text{if } \\delta = 0 .\n\\end{cases}\\end{split}\\]"
+  },
+  {
+    "objectID": "basics.html#survival-analysis",
+    "href": "basics.html#survival-analysis",
+    "title": "Basics",
+    "section": "",
+    "text": "The more detail introduction part can be found at (“Scikit-Survival,” n.d.).\n\\[\\begin{split}y = \\min(t, c) =\n\\begin{cases}\nt & \\text{if } \\delta = 1 , \\\\\nc & \\text{if } \\delta = 0 .\n\\end{cases}\\end{split}\\]"
+  },
+  {
+    "objectID": "basics.html#reference",
+    "href": "basics.html#reference",
+    "title": "Basics",
+    "section": "Reference",
+    "text": "Reference"
+  },
+  {
+    "objectID": "index.html#environment-setup",
+    "href": "index.html#environment-setup",
+    "title": "SURF 2024",
+    "section": "",
+    "text": "I know nothing about the dynamic behind, but I successfully set it up. I will introduce the procedure. I completely agree with Dr. Gruber at his post (Gruber 2022) :\n\nI never really found an IDE that I liked. I tried a few different ones including Spyder and Jupyter Notebook (not technically an IDE) and compared to RStudio and R Markdown they felt rather limited. Most Python users I met seem to think IDEs are not really important, which confuses me even further. That’s what you look at the entire time while programming!\n\nOnce you got familiar with Rstudio, or anyway Posit IDE, you are spoiled, that is how I felt. Therefore, I decide to continue to teach and code in Rstudio, even with python or jupyter-note. I also use Zotero for reference and Typora for slides writing.\n\nlibrary(reticulate)\npy_install('pandas')\npy_install('matplotlib')\npy_install('numpy')\npy_install('jupyter')\npy_install('scikit-learn')\nreticulate::repl_python()\n#virtualenv_install('matplotlib')\n#os &lt;- import(\"os\")\n#os$listdir(\".\")\n#use_python(\"/opt/homebrew/bin/python3\")\npy_install('scikit-survival')"
+  },
+  {
+    "objectID": "basics.html#survival-analysis-in-scikit-survival",
+    "href": "basics.html#survival-analysis-in-scikit-survival",
+    "title": "Basics",
+    "section": "",
+    "text": "The more detail introduction part can be found at (“Scikit-Survival” 2020) and (Polsterl 2020). The data set is from (Kalbfleisch and Prentice 1980), which is also available in R in package ‘survival’.\nThe survival analysis is also known as time to event analysis, one of the key characteristics is that it involves censoring.\n\\[\\begin{split}y = \\min(t, c) =\n\\begin{cases}\nt & \\text{if } \\delta = 1 , \\\\\nc & \\text{if } \\delta = 0 .\n\\end{cases}\\end{split}\\]"
+  },
+  {
+    "objectID": "index.html#reference",
+    "href": "index.html#reference",
+    "title": "index",
+    "section": "Reference",
+    "text": "Reference"
+  },
+  {
+    "objectID": "projects.html#survival-analysis-in-poisoning",
+    "href": "projects.html#survival-analysis-in-poisoning",
+    "title": "SURF Introduction",
+    "section": "",
+    "text": "Survival Analysis is an important branch in statistics, it analyze the expected duration of time until one event occurs. Survival analysis has widely been used in biostatistics, reliability and modeling, for various subjects and different types of data, especially in cancer-related study. The aim of this study was to investigate the clinical value of initial plasma diquat concentration in guiding the selection of extracorporeal blood purification regimens and gastric lavage.\n\n\nExtracorporeal treatment (ECTR): A therapeutic intervention performed externally to the body, which promotes poison removal by mechanisms different from endogenous pathways. ECTR includes hemodialysis (HD), continuous renal replacement therapy (CRRT), extended dialysis, peritoneal dialysis (although technically occurring in the body), hemofiltration (HF), hemodiafiltration (HDF), hemoperfusion (HP), therapeutic plasma exchange (PE) and albumin/ “liver” dialysis. Clinically, the doctors will treat the patients based on the experience. In this project, we will analyze this question statistically, for checking the efficiency and significance for the treatments in subgroups.\n\n\n\nThe survival analysis of poisoning cases involving specific toxins requires the application of appropriate statistical models to capture the complexity and heterogeneity of the data. The Cox Proportional Hazards Model is a widely used approach in survival analysis, and in this study, we will employ it as the primary tool for investigating the factors that influence survival outcomes. The Cox model assumes that the hazard function, which represents the instantaneous risk of an event (in this case, death or recovery), is proportional across individuals over time. This assumption allows us to estimate the effect of predictors on the hazard function without assuming a specific distribution for survival times. To account for potential heterogeneity in the data, we will consider several extensions of the Cox model. One such extension is the Cure Model, which accounts for the possibility of long-term survivors who are effectively cured of the toxicity effects. This model separates the population into two groups: those who are cured and those who are not, and models the survival distribution for each group separately. Another extension is the Frailty Model, which incorporates individual-level frailty factors to capture heterogeneity in survival outcomes. Frailty factors represent latent characteristics that affect the hazard function of each individual, and their inclusion in the model allows for more accurate estimation of survival probabilities. Additionally, we will consider the Accelerated Failure Time (AFT) model, which assumes that the survival time of an individual is multiplied by an exponential function of the predictors. This model provides a direct interpretation of the predictors in terms of their effect on survival time."
   }
 ]

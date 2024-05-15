@@ -1,5 +1,5 @@
 ---
-title: "try"
+title: "One Layer Neural Network"
 ---
 
 ### 有监督学习相关概念

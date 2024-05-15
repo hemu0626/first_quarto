@@ -1,7 +1,29 @@
 ---
-title: "index"
+title: ""
+bibliography: references.bib
 ---
 
-## Quarto
+## Environment Setup
 
-123
+I know nothing about the dynamic behind, but I successfully set it up. I will introduce the procedure. I completely agree with Dr. Gruber at his post [@gruber2022] :
+
+> I never really found an IDE that I liked. I tried a few different ones including Spyder and Jupyter Notebook (not technically an IDE) and compared to RStudio and R Markdown they felt rather limited. Most Python users I met seem to think IDEs are not really important, which confuses me even further. That’s what you look at the entire time while programming!
+
+Once you got familiar with Rstudio, or anyway Posit IDE, you are spoiled, that is how I felt. Therefore, I decide to continue to teach and code in Rstudio, even with python or jupyter-note. I also use Zotero for reference and Typora for slides writing.
+
+```{r, eval=FALSE}
+library(reticulate)
+py_install('pandas')
+py_install('matplotlib')
+py_install('numpy')
+py_install('jupyter')
+py_install('scikit-learn')
+reticulate::repl_python()
+#virtualenv_install('matplotlib')
+#os <- import("os")
+#os$listdir(".")
+#use_python("/opt/homebrew/bin/python3")
+py_install('scikit-survival')
+```
+
+## Reference
