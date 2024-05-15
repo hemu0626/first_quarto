@@ -9,6 +9,6 @@ The more detail introduction part can be found at [@scikit-s] and [@polsterl2020
 
 The survival analysis is also known as time to event analysis, one of the key characteristics is that it involves censoring.
 
-We will go through basic statistics and try these packages in R and Python
+We will go through basic statistics and try these packages in R and Python.
 
 ## Reference

@@ -4,14 +4,14 @@
     "href": "basics.html",
     "title": "Basics",
     "section": "",
-    "text": "The more detail introduction part can be found at (“Scikit-Survival” 2020) and (Polsterl 2020). The data set is from (Kalbfleisch and Prentice 1980), which is also available in R in package ‘survival’.\nThe survival analysis is also known as time to event analysis, one of the key characteristics is that it involves censoring.\nWe will go through basic statistics and try these packages in R and Python"
+    "text": "The more detail introduction part can be found at (“Scikit-Survival” 2020) and (Polsterl 2020). The data set is from (Kalbfleisch and Prentice 1980), which is also available in R in package ‘survival’.\nThe survival analysis is also known as time to event analysis, one of the key characteristics is that it involves censoring.\nWe will go through basic statistics and try these packages in R and Python."
   },
   {
     "objectID": "basics.html#survival-analysis-in-scikit-survival",
     "href": "basics.html#survival-analysis-in-scikit-survival",
     "title": "Basics",
     "section": "",
-    "text": "The more detail introduction part can be found at (“Scikit-Survival” 2020) and (Polsterl 2020). The data set is from (Kalbfleisch and Prentice 1980), which is also available in R in package ‘survival’.\nThe survival analysis is also known as time to event analysis, one of the key characteristics is that it involves censoring.\nWe will go through basic statistics and try these packages in R and Python"
+    "text": "The more detail introduction part can be found at (“Scikit-Survival” 2020) and (Polsterl 2020). The data set is from (Kalbfleisch and Prentice 1980), which is also available in R in package ‘survival’.\nThe survival analysis is also known as time to event analysis, one of the key characteristics is that it involves censoring.\nWe will go through basic statistics and try these packages in R and Python."
   },
   {
     "objectID": "projects.html",
