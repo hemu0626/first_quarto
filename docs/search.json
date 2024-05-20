@@ -1,5 +1,22 @@
 [
   {
+<<<<<<< HEAD
+=======
+    "objectID": "basics.html",
+    "href": "basics.html",
+    "title": "Basics",
+    "section": "",
+    "text": "The more detail introduction part can be found at (“Scikit-Survival” 2020) and (Polsterl 2020). The data set is from (Kalbfleisch and Prentice 1980), which is also available in R in package ‘survival’.\nThe survival analysis is also known as time to event analysis, one of the key characteristics is that it involves censoring.\nWe will go through basic statistics and try these packages in R and Python."
+  },
+  {
+    "objectID": "basics.html#survival-analysis-in-scikit-survival",
+    "href": "basics.html#survival-analysis-in-scikit-survival",
+    "title": "Basics",
+    "section": "",
+    "text": "The more detail introduction part can be found at (“Scikit-Survival” 2020) and (Polsterl 2020). The data set is from (Kalbfleisch and Prentice 1980), which is also available in R in package ‘survival’.\nThe survival analysis is also known as time to event analysis, one of the key characteristics is that it involves censoring.\nWe will go through basic statistics and try these packages in R and Python."
+  },
+  {
+>>>>>>> 0f823b8c2c71771ce28429660dce51119fb1758a
     "objectID": "projects.html",
     "href": "projects.html",
     "title": "SURF Introduction",
@@ -7,17 +24,32 @@
     "text": "SURF, short for Summer Undergraduate Research Fellowship, is the summer research program funded by Xi’an Jiaotong-Liverpool University for undergraduate students. It provides opportunities for undergraduate to know more about ‘research’. My surf projects mainly work on encourage students in self-learning and applications. Some of my past SURF can be found here.\n\nSurvival Analysis in Poisoning\nSurvival Analysis is an important branch in statistics, it analyze the expected duration of time until one event occurs. Survival analysis has widely been used in biostatistics, reliability and modeling, for various subjects and different types of data, especially in cancer-related study. The aim of this study was to investigate the clinical value of initial plasma diquat concentration in guiding the selection of extracorporeal blood purification regimens and gastric lavage.\n\n\nECTR\nExtracorporeal treatment (ECTR): A therapeutic intervention performed externally to the body, which promotes poison removal by mechanisms different from endogenous pathways. ECTR includes hemodialysis (HD), continuous renal replacement therapy (CRRT), extended dialysis, peritoneal dialysis (although technically occurring in the body), hemofiltration (HF), hemodiafiltration (HDF), hemoperfusion (HP), therapeutic plasma exchange (PE) and albumin/ “liver” dialysis. Clinically, the doctors will treat the patients based on the experience. In this project, we will analyze this question statistically, for checking the efficiency and significance for the treatments in subgroups.\n\n\nMethodology\nThe survival analysis of poisoning cases involving specific toxins requires the application of appropriate statistical models to capture the complexity and heterogeneity of the data. The Cox Proportional Hazards Model is a widely used approach in survival analysis, and in this study, we will employ it as the primary tool for investigating the factors that influence survival outcomes. The Cox model assumes that the hazard function, which represents the instantaneous risk of an event (in this case, death or recovery), is proportional across individuals over time. This assumption allows us to estimate the effect of predictors on the hazard function without assuming a specific distribution for survival times. To account for potential heterogeneity in the data, we will consider several extensions of the Cox model. One such extension is the Cure Model, which accounts for the possibility of long-term survivors who are effectively cured of the toxicity effects. This model separates the population into two groups: those who are cured and those who are not, and models the survival distribution for each group separately. Another extension is the Frailty Model, which incorporates individual-level frailty factors to capture heterogeneity in survival outcomes. Frailty factors represent latent characteristics that affect the hazard function of each individual, and their inclusion in the model allows for more accurate estimation of survival probabilities. Additionally, we will consider the Accelerated Failure Time (AFT) model, which assumes that the survival time of an individual is multiplied by an exponential function of the predictors. This model provides a direct interpretation of the predictors in terms of their effect on survival time."
   },
   {
+<<<<<<< HEAD
+=======
+    "objectID": "onelayernn.html",
+    "href": "onelayernn.html",
+    "title": "One Layer Neural Network",
+    "section": "",
+    "text": "Build Neural Network to predict\n\nDemo\n\nfrom sklearn.neural_network import MLPClassifier\nX = [[0., 0.], [1., 1.]]\ny = [0, 1]\nclf = MLPClassifier(solver='lbfgs', alpha=1e-5,\n                    hidden_layer_sizes=(5, 2), random_state=1)\nclf.fit(X, y)\n\nMLPClassifier(alpha=1e-05, hidden_layer_sizes=(5, 2), random_state=1,\n              solver='lbfgs')\n\n\n\nclf.predict([[2., 2.], [-1., -2.]])\n[coef.shape for coef in clf.coefs_]\n\nclf.predict_proba([[2., 2.], [1., 2.]])\n\narray([[1.96718015e-04, 9.99803282e-01],\n       [1.96718015e-04, 9.99803282e-01]])\n\n\n\nX = [[0., 0.], [1., 1.]]\ny = [[0, 1], [1, 1]]\nclf = MLPClassifier(solver='lbfgs', alpha=1e-5,\n                    hidden_layer_sizes=(15,), random_state=1)\nclf.fit(X, y)\nclf.predict([[1., 2.]])\nclf.predict([[0., 0.]])\n\narray([[0, 1]])\n\n\n\n\nVisualization of MLP weights on MNIST"
+  },
+  {
+>>>>>>> 0f823b8c2c71771ce28429660dce51119fb1758a
     "objectID": "index.html",
     "href": "index.html",
     "title": "SURF 2024",
     "section": "",
+<<<<<<< HEAD
     "text": "I know nothing about the dynamic behind, but I successfully set it up. I will introduce the procedure. I completely agree with Dr. Gruber at his post (Gruber 2022) :\n\nI never really found an IDE that I liked. I tried a few different ones including Spyder and Jupyter Notebook (not technically an IDE) and compared to RStudio and R Markdown they felt rather limited. Most Python users I met seem to think IDEs are not really important, which confuses me even further. That’s what you look at the entire time while programming!\n\nOnce you got familiar with Rstudio, or anyway Posit IDE, you are spoiled, that is how I felt. Therefore, I decide to continue to teach and code in Rstudio, even with python or jupyter-note. Here, I use Zotero for reference and Typora for slides writing. I followed the post above to set the enviroment, the code is below, simple but works.\n\nlibrary(reticulate)\npy_install('pandas')\npy_install('matplotlib')\npy_install('numpy')\npy_install('jupyter')\npy_install('scikit-learn')\nreticulate::repl_python()\n#virtualenv_install('matplotlib')\n#os &lt;- import(\"os\")\n#os$listdir(\".\")\n#use_python(\"/opt/homebrew/bin/python3\")\npy_install('scikit-survival')\n\nmore on quarto, I learnt how to set this from youtuber (Robbins 2023) and her github."
+=======
+    "text": "I know nothing about the dynamic behind, but I successfully set it up. I will introduce the procedure. I completely agree with Dr. Gruber at his post (Gruber 2022) :\n\nI never really found an IDE that I liked. I tried a few different ones including Spyder and Jupyter Notebook (not technically an IDE) and compared to RStudio and R Markdown they felt rather limited. Most Python users I met seem to think IDEs are not really important, which confuses me even further. That’s what you look at the entire time while programming!\n\nOnce you got familiar with Rstudio, or anyway Posit IDE, you are spoiled, that is how I felt. Therefore, I decide to continue to teach and code in Rstudio, even with python or jupyter-note. Here, I use Zotero for reference and Typora for slides writing. I followed the post above to set the enviroment, the code is below, simple but works.\n\nlibrary(reticulate)\npy_install('pandas')\npy_install('matplotlib')\npy_install('numpy')\npy_install('jupyter')\npy_install('scikit-learn')\nreticulate::repl_python()\n#virtualenv_install('matplotlib')\n#os &lt;- import(\"os\")\n#os$listdir(\".\")\n#use_python(\"/opt/homebrew/bin/python3\")\npy_install('scikit-survival')\n\nmore on quarto, I learnt how to set this from youtuber (Robbins 2023) and her github.\nWhat is the difference between qmd and rmd, I found an explain by Yihui Xie (Xie 2022) ."
+>>>>>>> 0f823b8c2c71771ce28429660dce51119fb1758a
   },
   {
     "objectID": "index.html#environment-setup",
     "href": "index.html#environment-setup",
     "title": "SURF 2024",
     "section": "",
+<<<<<<< HEAD
     "text": "I know nothing about the dynamic behind, but I successfully set it up. I will introduce the procedure. I completely agree with Dr. Gruber at his post (Gruber 2022) :\n\nI never really found an IDE that I liked. I tried a few different ones including Spyder and Jupyter Notebook (not technically an IDE) and compared to RStudio and R Markdown they felt rather limited. Most Python users I met seem to think IDEs are not really important, which confuses me even further. That’s what you look at the entire time while programming!\n\nOnce you got familiar with Rstudio, or anyway Posit IDE, you are spoiled, that is how I felt. Therefore, I decide to continue to teach and code in Rstudio, even with python or jupyter-note. Here, I use Zotero for reference and Typora for slides writing. I followed the post above to set the enviroment, the code is below, simple but works.\n\nlibrary(reticulate)\npy_install('pandas')\npy_install('matplotlib')\npy_install('numpy')\npy_install('jupyter')\npy_install('scikit-learn')\nreticulate::repl_python()\n#virtualenv_install('matplotlib')\n#os &lt;- import(\"os\")\n#os$listdir(\".\")\n#use_python(\"/opt/homebrew/bin/python3\")\npy_install('scikit-survival')\n\nmore on quarto, I learnt how to set this from youtuber (Robbins 2023) and her github."
   },
   {
@@ -40,5 +72,8 @@
     "title": "One Layer Neural Network",
     "section": "",
     "text": "Build Neural Network to predict\n\nDemo\n\nfrom sklearn.neural_network import MLPClassifier\nX = [[0., 0.], [1., 1.]]\ny = [0, 1]\nclf = MLPClassifier(solver='lbfgs', alpha=1e-5,\n                    hidden_layer_sizes=(5, 2), random_state=1)\nclf.fit(X, y)\n\nMLPClassifier(alpha=1e-05, hidden_layer_sizes=(5, 2), random_state=1,\n              solver='lbfgs')In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.MLPClassifierMLPClassifier(alpha=1e-05, hidden_layer_sizes=(5, 2), random_state=1,\n              solver='lbfgs')\n\n\n\nclf.predict([[2., 2.], [-1., -2.]])\n[coef.shape for coef in clf.coefs_]\n\nclf.predict_proba([[2., 2.], [1., 2.]])\n\narray([[1.96718015e-04, 9.99803282e-01],\n       [1.96718015e-04, 9.99803282e-01]])\n\n\n\nX = [[0., 0.], [1., 1.]]\ny = [[0, 1], [1, 1]]\nclf = MLPClassifier(solver='lbfgs', alpha=1e-5,\n                    hidden_layer_sizes=(15,), random_state=1)\nclf.fit(X, y)\nclf.predict([[1., 2.]])\nclf.predict([[0., 0.]])\n\narray([[0, 1]])\n\n\n\n\nVisualization of MLP weights on MNIST"
+=======
+    "text": "I know nothing about the dynamic behind, but I successfully set it up. I will introduce the procedure. I completely agree with Dr. Gruber at his post (Gruber 2022) :\n\nI never really found an IDE that I liked. I tried a few different ones including Spyder and Jupyter Notebook (not technically an IDE) and compared to RStudio and R Markdown they felt rather limited. Most Python users I met seem to think IDEs are not really important, which confuses me even further. That’s what you look at the entire time while programming!\n\nOnce you got familiar with Rstudio, or anyway Posit IDE, you are spoiled, that is how I felt. Therefore, I decide to continue to teach and code in Rstudio, even with python or jupyter-note. Here, I use Zotero for reference and Typora for slides writing. I followed the post above to set the enviroment, the code is below, simple but works.\n\nlibrary(reticulate)\npy_install('pandas')\npy_install('matplotlib')\npy_install('numpy')\npy_install('jupyter')\npy_install('scikit-learn')\nreticulate::repl_python()\n#virtualenv_install('matplotlib')\n#os &lt;- import(\"os\")\n#os$listdir(\".\")\n#use_python(\"/opt/homebrew/bin/python3\")\npy_install('scikit-survival')\n\nmore on quarto, I learnt how to set this from youtuber (Robbins 2023) and her github.\nWhat is the difference between qmd and rmd, I found an explain by Yihui Xie (Xie 2022) ."
+>>>>>>> 0f823b8c2c71771ce28429660dce51119fb1758a
   }
 ]

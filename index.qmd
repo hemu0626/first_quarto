@@ -28,4 +28,6 @@ py_install('scikit-survival')
 
 more on quarto, I learnt how to set this from youtuber [@robbins2023] and her github.
 
+What is the difference between qmd and rmd, I found an explain by Yihui Xie [@xie] .
+
 ## Reference

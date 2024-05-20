@@ -12,8 +12,8 @@ website:
         text: SURF Intro
       - href: basics.qmd
         text: Basics
-      - href: onelayernn.qmd
-        text: Machine Learning Methods 
+    #  - href: onelayernn.qmd
+    #    text: Machine Learning Methods 
 format: 
   html: 
     theme: cosmo
